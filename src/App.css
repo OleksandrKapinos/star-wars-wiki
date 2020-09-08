@@ -1,0 +1,13 @@
+
+* {
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+}
+
+div {
+/*justify-self: ;*/
+  /*justify-content: space-between;*/
+/*background-color: inherit;*/
+  /*background-image: url("https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg");*/
+}
