@@ -13,7 +13,7 @@ function App() {
 
 	return (
 		<div className='App'>
-			<BrowserRouter>
+			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<Header setTheme={setTheme} theme={theme}/>
 				<NavBar theme={theme}/>
 				<div className="content">

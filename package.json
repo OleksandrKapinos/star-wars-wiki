@@ -2,7 +2,7 @@
   "name": "star-wars-wiki",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https,://oleksandrkapinos.github.io/star-wars-wiki",
+  "homepage": "https://oleksandrkapinos.github.io/star-wars-wiki",
   "dependencies": {
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
