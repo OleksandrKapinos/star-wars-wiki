@@ -5,11 +5,15 @@ import {darkTheme, lightTheme} from "../../theme/theme";
 const PageNumberBar = (props) => {
 
     const PageNumberBarWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
         width: 450px;
         margin: 0 auto;
         padding-bottom: 30px;
+        @media (max-width: 1000px){ 
+            width: auto;
+            justify-content: space-around;
+        }
     `;
 
     const StyledButton = styled.button`
@@ -27,6 +31,9 @@ const PageNumberBar = (props) => {
         }
         &:disabled {
         background-color: #757575;
+        }
+        @media (max-width: 1000px){ 
+            width: 120px;
         }
     `;
 

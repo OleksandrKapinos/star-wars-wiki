@@ -51,6 +51,10 @@ const Film = (props) => {
     border: 1px solid ${props => props.theme.textColor};
     border-radius: 13px;
     background-color: ${props => props.theme.opacityBgColor};
+    @media (max-width: 1000px){ 
+            grid-template-columns: 1fr;
+            padding: 10px 0;
+    }
 `;
 
     return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>

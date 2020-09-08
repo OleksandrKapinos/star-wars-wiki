@@ -24,6 +24,11 @@ const ThemeSwitcher = (props) => {
             background-color: ${props => props.theme.textColor};
             color: ${props => props.theme.bgColor};
         }
+        @media (max-width: 1000px){ 
+			margin: 0;
+            padding: 10px 2px;
+    		font-size: 14px;   
+        }    
     `;
 
 

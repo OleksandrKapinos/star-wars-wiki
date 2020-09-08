@@ -35,6 +35,9 @@ const PersonFilms = (props) => {
             background-color: ${props => props.theme.textColor};
             color: ${props => props.theme.bgColor};
 	  }
+	@media (max-width: 1000px){ 
+            width: 200px;
+        }  
 `;
 
 

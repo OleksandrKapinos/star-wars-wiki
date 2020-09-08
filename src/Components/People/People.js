@@ -6,7 +6,6 @@ import PageNumberBar from '../../common/PageNumberBar/PageNumberBar';
 import ListsItem from '../ListsItem/ListsItem';
 import getIdFromUrl from '../../common/getIdFromUrl/getIdFromUrl';
 import {withRouter} from 'react-router-dom';
-import {PeopleStyleWrapper} from './People.style';
 import styled, {ThemeProvider} from 'styled-components';
 import {darkTheme, lightTheme} from "../../theme/theme";
 
@@ -82,6 +81,10 @@ const People = (props) => {
         background-repeat: no-repeat; 
         background-size: cover;
         background-image: url("${props => props.theme.bgImage}");
+        @media (max-width: 1000px){ 
+            position: relative;
+            top: 0; 
+         }
 `;
 
 

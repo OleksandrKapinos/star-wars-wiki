@@ -6,7 +6,7 @@ import {darkTheme, lightTheme} from "../../theme/theme";
 const LoadingSpinner = (props) => {
 
     const Loader = styled.div`
-    color: ${props => props.theme.color};
+    color: ${props => props.theme.textColor};
     font-size: 90px;
     text-indent: -9999em;
     overflow: hidden;

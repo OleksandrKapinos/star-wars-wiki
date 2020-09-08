@@ -27,10 +27,15 @@ const Films = (props) => {
     bottom: 0;
     right: 0;
     height: 100%;
-    padding: 30px;
+    padding-top: 15px;
     background-repeat: no-repeat; 
     background-size: cover;
     background-image: url("${props => props.theme.bgImage}");
+    @media (max-width: 1000px){ 
+            position: relative;
+            top: 0; 
+            height: 90vh;
+         }
 `;
 
 
