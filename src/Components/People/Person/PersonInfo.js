@@ -30,7 +30,7 @@ const PersonInfo = ({item, theme}) => {
 
     return <ThemeProvider theme={theme === 'theme-light' ? lightTheme : darkTheme}>
                 <PersonImage
-                    src={`https://starwars-visualguide.com/assets/img/characters/${getIdFromUrl(item.url)}.jpg`}
+                    src={item.url && `https://starwars-visualguide.com/assets/img/characters/${getIdFromUrl(item.url)}.jpg`}
                     alt={item.name}/>
                     <DetailBox>
                         <StyledHeader>{item.name}</StyledHeader>

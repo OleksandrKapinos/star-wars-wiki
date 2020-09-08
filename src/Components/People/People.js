@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import {peopleAPI} from '../../api/api';
 import LoadingSpinner from '../../common/LoadingSpinner/LoadingSpinner';
 import SearchBar from '../../common/SearchBar/SearchBar';
@@ -9,8 +9,6 @@ import {withRouter} from 'react-router-dom';
 import {PeopleStyleWrapper} from './People.style';
 import styled, {ThemeProvider} from 'styled-components';
 import {darkTheme, lightTheme} from "../../theme/theme";
-import queryString from 'query-string';
-
 
 
 const People = (props) => {
@@ -50,12 +48,6 @@ const People = (props) => {
         });
     };
 
-    const getQueryString = () => {
-        let params = queryString.parse(props.location.search);
-        setPage(params.page);
-        setSearchValue(params.search);
-    };
-
     const getDataFromApi = (promise) => {
         promise.then(result => {
             let {previous, next, results} = result;
@@ -66,10 +58,9 @@ const People = (props) => {
     };
 
 
-
     useEffect(() => {
         setIsLoading(true);
-        getQueryString();
+        setQueryString(page, searchValue);
         searchValue
             ? getDataFromApi(peopleAPI.getFilteredPeoples(searchValue, page))
             : getDataFromApi(peopleAPI.getPeoples(page));
@@ -79,6 +70,19 @@ const People = (props) => {
     const toItem = useCallback(item => <ListsItem name={item.name} id={getIdFromUrl(item.url)}
                                                   key={item.name} theme={props.theme}/>);
     const personLinksList = peopleList.map(toItem);
+
+
+    const PeopleStyleWrapper = styled.div`
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        background-repeat: no-repeat; 
+        background-size: cover;
+        background-image: url("${props => props.theme.bgImage}");
+`;
 
 
     return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>

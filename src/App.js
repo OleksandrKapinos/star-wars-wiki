@@ -8,6 +8,7 @@ import Film from './Components/Films/Film/Film';
 import NavBar from './Components/NavBar/NavBar';
 import People from './Components/People/People';
 
+
 function App() {
 	const [theme, setTheme] = useState('theme-light');
 
