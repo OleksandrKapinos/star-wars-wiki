@@ -59,9 +59,9 @@ const People = (props) => {
 
     useEffect(() => {
         setIsLoading(true);
-        setQueryString(page, searchValue);
-        searchValue
-            ? getDataFromApi(peopleAPI.getFilteredPeoples(searchValue, page))
+        // setQueryString(page, searchValue);
+        searchValue ?
+            getDataFromApi(peopleAPI.getFilteredPeoples(searchValue, page))
             : getDataFromApi(peopleAPI.getPeoples(page));
     }, [page, searchValue, setPeopleList, setIsLoading]);
 
@@ -84,6 +84,7 @@ const People = (props) => {
         @media (max-width: 1000px){ 
             position: relative;
             top: 0; 
+            min-height: 90vh;
          }
 `;
 
