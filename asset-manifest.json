@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/css/main.4daa4c80.chunk.css",
-    "main.js": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/js/main.017303a8.chunk.js",
-    "main.js.map": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/js/main.017303a8.chunk.js.map",
+    "main.js": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/js/main.06f189e5.chunk.js",
+    "main.js.map": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/js/main.06f189e5.chunk.js.map",
     "runtime-main.js": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/js/runtime-main.49870546.js",
     "runtime-main.js.map": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/js/runtime-main.49870546.js.map",
     "static/js/2.161af960.chunk.js": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/js/2.161af960.chunk.js",
     "static/js/2.161af960.chunk.js.map": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/js/2.161af960.chunk.js.map",
     "index.html": "/https,://oleksandrkapinos.github.io/star-wars-wiki/index.html",
-    "precache-manifest.d26ba8133210bc9002870999401492f4.js": "/https,://oleksandrkapinos.github.io/star-wars-wiki/precache-manifest.d26ba8133210bc9002870999401492f4.js",
+    "precache-manifest.65cc8261a826cc418394d139f7862e97.js": "/https,://oleksandrkapinos.github.io/star-wars-wiki/precache-manifest.65cc8261a826cc418394d139f7862e97.js",
     "service-worker.js": "/https,://oleksandrkapinos.github.io/star-wars-wiki/service-worker.js",
     "static/css/main.4daa4c80.chunk.css.map": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/css/main.4daa4c80.chunk.css.map",
     "static/js/2.161af960.chunk.js.LICENSE.txt": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/js/2.161af960.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.49870546.js",
     "static/js/2.161af960.chunk.js",
     "static/css/main.4daa4c80.chunk.css",
-    "static/js/main.017303a8.chunk.js"
+    "static/js/main.06f189e5.chunk.js"
   ]
 }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bbc5770af45f7c1500fe0f99695e29cd",
+    "revision": "7c8fc41e17bbd12605fc3ebe64097f87",
     "url": "/https,://oleksandrkapinos.github.io/star-wars-wiki/index.html"
   },
   {
-    "revision": "1f058f4bd0c1636df901",
+    "revision": "4b142eb161edcb29ff07",
     "url": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/css/main.4daa4c80.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/js/2.161af960.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1f058f4bd0c1636df901",
-    "url": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/js/main.017303a8.chunk.js"
+    "revision": "4b142eb161edcb29ff07",
+    "url": "/https,://oleksandrkapinos.github.io/star-wars-wiki/static/js/main.06f189e5.chunk.js"
   },
   {
     "revision": "d1cd8e2e0d4a6fee21af",
