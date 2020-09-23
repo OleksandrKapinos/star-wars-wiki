@@ -5,7 +5,7 @@ export const NavBarWrapper = styled.div`
         position: absolute;
          top: 0;
         left: 0;
-        width: 15vw;
+        width: 10vh;
         height: 10vh;
        background-color: ${props => props.theme.bgColor};
        z-index: 2;
@@ -41,6 +41,10 @@ justify-content: center;
         font-size: 20px;
         border-bottom: 1px solid ${props => props.theme.textColor};
         &:hover {
+            background-color: ${props => props.theme.textColor};
+            color: ${props => props.theme.bgColor};
+        }
+        &.active {
             background-color: ${props => props.theme.textColor};
             color: ${props => props.theme.bgColor};
         }

@@ -11,7 +11,12 @@ const ThemeSwitcher = (props) => {
 			props.setTheme('theme-dark');
 	};
 
-	const StyledButton = styled.button`
+	return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>
+		<StyledButton type="checkbox" onClick={switchTheme}> Switch theme </StyledButton>
+	</ThemeProvider>;
+};
+
+const StyledButton = styled.button`
 		margin: 22px;
         padding: 10px;
         font-size: 20px;
@@ -30,14 +35,5 @@ const ThemeSwitcher = (props) => {
     		font-size: 14px;   
         }    
     `;
-
-
-	return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>
-		<StyledButton type="checkbox" onClick={switchTheme}> Switch theme </StyledButton>
-	</ThemeProvider>;
-};
-
-
-
 
 export default ThemeSwitcher;

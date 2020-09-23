@@ -3,8 +3,17 @@ import styled, {ThemeProvider} from "styled-components";
 import {darkTheme, lightTheme} from "../../theme/theme";
 
 const PageNumberBar = (props) => {
+    return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>
+        <PageNumberBarWrapper>
+            <StyledButton onClick={props.showPreviousPage} disabled={!props.availablePage.previous}
+            >Previous</StyledButton>
+            <StyledButton onClick={props.showNextPage} disabled={!props.availablePage.next}
+            >Next</StyledButton>
+        </PageNumberBarWrapper>
+    </ThemeProvider>;
+};
 
-    const PageNumberBarWrapper = styled.div`
+const PageNumberBarWrapper = styled.div`
         display: flex;
         justify-content: space-between;
         width: 450px;
@@ -16,7 +25,7 @@ const PageNumberBar = (props) => {
         }
     `;
 
-    const StyledButton = styled.button`
+const StyledButton = styled.button`
         padding: 10px 20px;
         width: 220px;
         font-size: 20px;
@@ -37,15 +46,5 @@ const PageNumberBar = (props) => {
         }
     `;
 
-
-    return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>
-        <PageNumberBarWrapper>
-            <StyledButton onClick={props.showPreviousPage} disabled={!props.availablePage.previous}
-            >Previous</StyledButton>
-            <StyledButton onClick={props.showNextPage} disabled={!props.availablePage.next}
-            >Next</StyledButton>
-        </PageNumberBarWrapper>
-    </ThemeProvider>;
-};
 
 export default PageNumberBar;

@@ -7,27 +7,47 @@ const axiosInstance = axios.create({
 
 export const peopleAPI = {
     getPeoples(page) {
-        return axiosInstance.get(`/people/?page=${page}`)
-            .then(response => response.data);
+        try {
+            return axiosInstance.get(`/people/?page=${page}`)
+                .then(response => response.data);
+        } catch (e) {
+            console.log('Error: ', e);
+        }
     },
     getFilteredPeoples(value, page) {
-        return axiosInstance.get(`/people/?search=${value}&page=${page}`)
-            .then(response => response.data);
+        try {
+            return axiosInstance.get(`/people/?search=${value}&page=${page}`)
+                .then(response => response.data);
+        } catch (e) {
+            console.log('Error: ', e);
+        }
     },
     getCurrentPerson(id) {
-        return axiosInstance.get(`/people/${id}`)
-            .then(response => response.data);
+        try {
+            return axiosInstance.get(`/people/${id}`)
+                .then(response => response.data);
+        } catch (e) {
+            console.log('Error: ', e);
+        }
     }
 };
 
 export const filmAPI = {
     getFilms() {
-        return axiosInstance.get('/films')
-            .then(response => response.data);
+        try {
+            return axiosInstance.get('/films')
+                .then(response => response.data);
+        } catch (e) {
+            console.log('Error: ', e);
+        }
     },
     getCurrentFilm(id) {
-        return axiosInstance.get(`/films/${id}`)
-            .then(response => response.data);
+        try {
+            return axiosInstance.get(`/films/${id}`)
+                .then(response => response.data);
+        } catch (e) {
+            console.log('Error: ', e);
+        }
     }
 };
 

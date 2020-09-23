@@ -4,12 +4,18 @@ import {darkTheme, lightTheme} from "../../theme/theme";
 
 
 const LoadingSpinner = (props) => {
+    return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>
+        <LoaderWrapper>
+            <Loader></Loader>
+        </LoaderWrapper>
+    </ThemeProvider>
+};
 
-    const LoaderWrapper = styled.div`
+const LoaderWrapper = styled.div`
     height: 90vh;
     `;
 
-    const Loader = styled.div`display: inline-block;
+const Loader = styled.div`display: inline-block;
     display: block;
     margin: 100px auto 0 auto;
     width: 200px;
@@ -32,12 +38,5 @@ const LoadingSpinner = (props) => {
             transform: rotate(360deg);
         }
 `;
-
-    return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>
-        <LoaderWrapper>
-            <Loader></Loader>
-        </LoaderWrapper>
-    </ThemeProvider>
-};
 
 export default LoadingSpinner;

@@ -4,8 +4,12 @@ import {withRouter} from "react-router-dom";
 import {darkTheme, lightTheme} from "../../theme/theme";
 
 const BackButton = (props) => {
+        return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>
+        <StyledButton onClick={props.history.goBack}>Back</StyledButton>
+    </ThemeProvider>
+};
 
-    const StyledButton = styled.button`
+const StyledButton = styled.button`
     width: 150px;
         padding: 10px;
         margin-bottom: 30px;
@@ -19,10 +23,5 @@ const BackButton = (props) => {
             color: ${props => props.theme.bgColor};
         }
     `;
-
-    return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>
-        <StyledButton onClick={props.history.goBack}>Back</StyledButton>
-    </ThemeProvider>
-};
 
 export default withRouter(BackButton);

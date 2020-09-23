@@ -1,9 +1,10 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {filmAPI} from "../../api/api";
 import ListsItem from "../ListsItem/ListsItem";
 import getIdFromUrl from "../../common/getIdFromUrl/getIdFromUrl";
 import {darkTheme, lightTheme} from "../../theme/theme";
-import styled, {ThemeProvider} from "styled-components";
+import {ThemeProvider} from "styled-components";
+import {FilmsStyleWrapper} from "./Films.styles";
 
 const Films = (props) => {
     const [films, setFilms] = useState([]);
@@ -15,28 +16,8 @@ const Films = (props) => {
     }, [setFilms]);
 
 
-    const toItem = useCallback(item => <ListsItem name={item.title} id={getIdFromUrl(item.url)}
-                                                           key={item.title} theme={props.theme}/>);
-    const filmLinksList = films.map(toItem);
-
-
-    const FilmsStyleWrapper = styled.div`
-    position: absolute;
-    top: 10vh;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    padding-top: 15px;
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-image: url("${props => props.theme.bgImage}");
-    @media (max-width: 1000px){ 
-            position: relative;
-            top: 0; 
-            height: 90vh;
-         }
-`;
+    const filmLinksList = films.map(item => (
+        <ListsItem name={item.title} id={getIdFromUrl(item.url)} key={item.title} theme={props.theme}/>));
 
 
     return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>

@@ -1,22 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import {filmAPI} from "../../../api/api";
 import {Link} from "react-router-dom";
-import getIdFromUrl from "../../../common/getIdFromUrl/getIdFromUrl";
-import styled, {ThemeProvider} from "styled-components";
-import {darkTheme, lightTheme} from "../../../theme/theme";
+import styled from "styled-components";
 
-const PersonFilms = (props) => {
-    const [filmInfo, setFilmInfo] = useState({});
-    const id = getIdFromUrl(props.filmUrl);
-
-
-    useEffect(() => {
-        filmAPI.getCurrentFilm(id)
-            .then(result => setFilmInfo(result));
-    }, [props.filmUrl, setFilmInfo]);
-
-
-    const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
     display: flex;
     justify-content: center;
     margin: 15px auto 15px auto;
@@ -39,13 +24,3 @@ const PersonFilms = (props) => {
             width: 200px;
         }  
 `;
-
-
-    return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>
-        <StyledLink to={`/films/${id}`}>
-            {filmInfo.title}
-        </StyledLink>
-    </ThemeProvider>
-};
-
-export default PersonFilms;

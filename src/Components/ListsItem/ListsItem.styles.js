@@ -1,9 +1,7 @@
-import React from 'react';
-import {Link, withRouter} from 'react-router-dom';
-import styled, {ThemeProvider} from 'styled-components';
-import {darkTheme, lightTheme} from "../../theme/theme";
+import {Link} from 'react-router-dom';
+import styled from 'styled-components';
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
     display: flex;
     justify-content: center;
     margin: 0 auto 15px auto;
@@ -26,15 +24,3 @@ const StyledLink = styled(Link)`
             width: 220px;
         }
 `;
-
-const ListsItem = ({name, id, match, theme}) => {
-
-
-    return <ThemeProvider theme={theme === 'theme-light' ? lightTheme : darkTheme}>
-        <StyledLink to={match.url + `/${id}`}>
-            {name}
-        </StyledLink>
-    </ThemeProvider>
-};
-
-export default withRouter(ListsItem);

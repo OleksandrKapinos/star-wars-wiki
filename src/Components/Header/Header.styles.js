@@ -1,12 +1,7 @@
-import React from 'react';
-import styled, {ThemeProvider} from 'styled-components';
+import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import ThemeSwitcher from '../../common/ThemeSwitcher/ThemeSwitcher';
-import {darkTheme, lightTheme} from "../../theme/theme";
 
-
-const Header = (props) => {
-	const Header = styled.div`
+export const HeaderBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +14,8 @@ const Header = (props) => {
 	        margin: 0;
 	    } 
 	`;
-	const StyledLink = styled(Link)`
+
+export const StyledLink = styled(Link)`
         margin: 0;
         text-decoration: none;
         font-size: 2.5em;
@@ -33,15 +29,12 @@ const Header = (props) => {
         
     `;
 
-
-
-
-	return <ThemeProvider theme={props.theme === 'theme-light' ? lightTheme : darkTheme}>
-		<Header>
-			<StyledLink to='/'>Star Wars Wiki</StyledLink>
-			<ThemeSwitcher setTheme={props.setTheme} theme={props.theme}/>
-		</Header>
-	</ThemeProvider>;
-};
-
-export default Header;
+export const Background = styled.div`
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-repeat: no-repeat; 
+        background-size: cover;
+        background-image: url("${props => props.theme.bgImage}"); 
+`;
